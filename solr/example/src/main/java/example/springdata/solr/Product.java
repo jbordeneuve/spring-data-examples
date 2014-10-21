@@ -25,7 +25,7 @@ import org.springframework.data.solr.core.mapping.Indexed;
 import org.springframework.data.solr.core.mapping.SolrDocument;
 
 /**
- * Document representing a Product and its attributes matching the fieldes defined in the <a
+ * Document representing a Product and its attributes matching the fields defined in the <a
  * href="http://localhost:8983/solr/collection1/schema">example solr schema</a>.
  * 
  * @author Christoph Strobl
@@ -38,11 +38,14 @@ public class Product {
 	private @Indexed String name;
 	private @Indexed(name = "cat") List<String> category;
 	private @Indexed(name = "store") Point location;
+	private @Indexed String description;
 	private @Indexed boolean inStock;
+	private @Indexed Integer popularity;
+	private @Indexed(readonly = true) Float score;
 
 	@Override
 	public String toString() {
 		return "Product [id=" + id + ", name=" + name + ", category=" + category + ", location=" + location + ", inStock="
-				+ inStock + "]";
+				+ inStock + ", score=" + score + "]";
 	}
 }
