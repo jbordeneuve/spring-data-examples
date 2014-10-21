@@ -12,6 +12,12 @@
 	<name>Spring Data Solr - Example</name>
 
 	<dependencies>
+	    <!-- use current EVANS snapshot-->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-solr</artifactId>
+			<version>1.4.0.BUILD-SNAPSHOT</version>
+		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>spring-data-solr-example-utils</artifactId>
